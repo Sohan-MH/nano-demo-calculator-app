@@ -13,13 +13,13 @@ def greeting():
 def add():
     input_data = request.json
     ans = input_data['first'] + input_data['second']
-    return str(ans), 200
+    return ans, 200
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
     input_data = request.json
     ans = input_data['first'] - input_data['second']
-    return str(ans), 200
+    return ans, 200
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
